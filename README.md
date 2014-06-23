@@ -1,11 +1,5 @@
-##[QCopterFC v2.0](https://github.com/QCopter/QCopterFlightControl)
-QCopterFC 是一個基於 STM32F4 的飛行控制器，可以應用於固定翼、旋翼飛行器上面，用來實現濾波、平衡、控制等演算法的平台。板子上有 9 個自由度的慣性測量元件 MPU-9150，可以讀取加速度、角速度、磁力資訊，計算出當下的姿態角度、氣壓計 MS5611， 讀取環境氣壓，計算高度、工作於 2.4GHz 頻段的無線傳輸模組 nRF24L01，傳輸飛行器上相關資訊，同時也可以藉由該模組從外部接收飛行控制指令，另外還有 Micro USB 與 Micro SD，並且引出了 ADC、PWM、SPI、UART，使的 QCopterFC 可以有更多的應用、擴充。
-> QCopterFC v2.2 預計修改：  
-> 1. 減少 2 個 PWM 通道，並新增 1 個 CAN BUS ( 該 PIN 還是可以使用 PWM )  
-> 2. IMU_10-DOF 改為 SmartIMU，使用 SPI 操作的 MPU-9250，來增加讀取速度。  
-> 3. 將 PWM 部分的電源線連接起來，以增加擴展裝置的方便性。  
-> 4. 體積將小幅度縮小。  
-> 5. 更改 CamSPI 為 FFCSPI，並修改腳位，使其可以連接 QMV v2.0、QRC、TFT_2.2 等裝置。  
+##[QCopterFC v2.2](https://github.com/QCopter/QCopterFlightControl)
+QCopterFC 是一個基於 STM32F4 的飛行控制器，可以應用於固定翼、旋翼飛行器上面，用來實現濾波、平衡、控制等演算法的平台。感測器部分使用 SmartIMU，其集成微控制器 STM32F401C、9 DOF 慣性測量元件 MPU9250 以及氣壓計 MS5611，SmartIMU 提供了兩種操作模式，讀取感測器原始資料與讀取當下姿態角度，可以透過指令選擇，無線傳輸部分使用工作於 2.4GHz 頻段的無線傳輸模組 nRF24L01P，傳輸飛行器上相關資訊，同時也可以藉由該模組從外部接收飛行控制指令，另外板上還有 Micro USB 與 Micro SD，並且引出獨立的 UART、SPI、ADC、PWM、CAN，使的 QCopterFC 可以有更多的應用、擴充。
 
 <br>
 ##[QCopterMV v1.2](https://github.com/QCopter/QCopterMachineVision)
@@ -32,17 +26,14 @@ QCopteRC 是一個遙控器，用來與 QCopterFC 溝通、控制，是四軸飛
 Design
 ========
 
-##[QCopterWP](https://github.com/QCopter/QCopterWirelessPower)
-QCopter WirelessPower 是一個具有無線電力傳輸功能的電源管理裝置，可以無線充電並管理以及計算電量等資訊。
+##[QCopterPM](https://github.com/QCopter/QCopterPowerManage)
+QCopter PowerManage 是一個電源管理裝置，預計具有無線電力傳輸的功能，可以無線充電並管理以及計算電量等資訊。
 > 目前進度：  
-> 無線電力已完成，整體架構設計中 ... 
+> 目前暫停設計...  
 > 可以參考 https://github.com/Wayne-Weng/Wireless-Power
 
 <br>
 ##[QCopterESC](https://github.com/QCopter/QCopterElectronicSpeedControl)
 QCopter ElectronicSpeedControl 是一個無刷馬達的電子調速器。
 > 目前進度：  
-> QCopterESC PCB v1.0 版本完成，焊接測試中 ... 
-
-<br>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW"><img alt="創用 CC 授權條款" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/tw/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> QCopter_Family </span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/QCopter" property="cc:attributionName" rel="cc:attributionURL"> QCopter </a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW">創用CC 姓名標示-相同方式分享 3.0 台灣 授權條款</a>釋出。
+> 目前暫停設計...  
