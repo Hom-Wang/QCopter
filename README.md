@@ -9,7 +9,7 @@ QCopterFC 是一個基於 STM32F4 的飛行控制器，可以應用於固定翼�
 <br>
 ##[QCopterMV v1.2](https://github.com/QCopter/QCopterMachineVision)
 QCopteMV 是一個機系視覺開發板，用來實現影像處理的裝置，目前 QCopterMV 搭配 MT9V022 灰階的攝像頭模組，用以實現光流、特徵辨識等演算法，板子上引出 FSMC，可以外接 3.5-inch TFT 螢幕模組，實現照相機功能。
-> QCopterMV v2.0 預計修改：  
+> QCopterMV v2.0 預計修改： 
 >1. 微控制器改為 LQFP144 的 STM32F42xZ 或 STM32F43xZ，增加運算速度及功能。  
 >2. 加入 [SDRAM](http://www.issi.com/WW/pdf/42-45S16400J.pdf)，透過 FMC 操作，用以增加影像處理時所需的 RAM 空間。  
 >3. 加入 SPI 操作的 6DOF IMU，並預計新增影像自動水平的功能。  
@@ -22,11 +22,11 @@ QCopteMV 是一個機系視覺開發板，用來實現影像處理的裝置，�
 ##[QCopterRC v1.1](https://github.com/QCopter/QCopterRemoteControl)
 QCopteRC 是一個遙控器，用來與 QCopterFC 溝通、控制，是四軸飛行器的控制裝置，搭載感測器，有體感功能，板子上外接 3.5 吋螢幕，可以將四軸上的回傳回來的資訊顯示出來，並且建立操作介面。
 > QCopterRC v2.0 預計修改：  
->1. 微控制器改為 LQFP144 的 STM32F42xZ 或 STM32F43xZ，增加運算速度及功能。  
->2. 加入 [SDRAM](http://www.issi.com/WW/pdf/42-45S16400J.pdf)，透過 FMC 操作，增加靈活與擴充性。  
->3. 改成使用 4 吋 800*480 螢幕，增加解析度及畫質。  
+>1. 微控制器改為 LQFP100 的 STM32F42xV 或 STM32F43xV，增加運算速度。  
+>2. 無線傳輸部分改用 [nRF51422](https://www.nordicsemi.com/eng/Products/ANT/nRF51422) 傳輸，以相容 BLE & ANT+。  
+>3. 改成使用 [TFT_4.0-inch](https://github.com/KitSprout/TFT_4.0-inch) 800*480 螢幕，增加解析度及畫質。  
 >4. 由於改成 4 吋螢幕，所以會修改整體位置，並增減部分輸入裝置功能或數量，像是按鍵數等。  
->5. 考慮將乙太網路功能直接透過 STM32 本身硬體實現。  
+>5. 去除乙太網路功能。  
 
 Design
 ========
