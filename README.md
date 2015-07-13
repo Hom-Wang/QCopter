@@ -28,6 +28,10 @@ QCopteRC 是一個遙控器，用來與 QCopterFC 溝通、控制，是四軸飛
 >4. 由於改成 4 吋螢幕，所以會修改整體位置，並增減部分輸入裝置功能或數量，像是按鍵數等。  
 >5. 去除乙太網路功能。  
 
+<br>
+##[QCopterNano](https://github.com/QCopter/QCopterNano)
+QCopterNano 是一個基於Cortex-M4 的微型四軸飛行器，飛控採用 SmartIMU，搭載 STM32F401CU 和 MPU9250，並透過 nRF24L01P 來做無線的資料傳輸、遙控，馬達座採用 3D Printer 製作。  
+
 Design
 ========
 
